@@ -1,0 +1,32 @@
+<html>
+<head>
+  <title>Hello, rails!</title>
+</head>
+<body>
+<h1>Hello from Rails!</h1>
+<p id="time">It is now <%= @time %></p>
+<input type="button" id="testButton" value="HiButton">
+<%= link_to "Button time", main_Index_path %>
+
+<% for file in @files %>
+<ul>
+    <li><p>file name is:<%= file %></p></li>
+</ul>
+<% end %>
+
+</body>
+</html>
+
+<style>
+  #time{
+      color: blue;
+  }
+</style>
+
+<script>
+  $(function(){
+      $('#testButton').click(function(){
+          alert("hi!");
+      });
+  });
+</script>
